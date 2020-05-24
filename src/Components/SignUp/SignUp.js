@@ -120,7 +120,7 @@ export default function SignUp(props) {
                     <Grid container justify="flex-end">
                         <Grid item>
                             {/* eslint-disable-next-line react/jsx-no-undef */}
-                            <NavLink to="/login">
+                            <NavLink to="/">
                                 Already have an account? Sign in
                             </NavLink>
                         </Grid>

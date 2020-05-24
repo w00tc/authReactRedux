@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "http://https://w00tc.github.io/my-app",
+  "homepage": "https://w00tc.github.io/authReactRedux",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.14",

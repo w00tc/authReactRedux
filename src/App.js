@@ -1,9 +1,9 @@
-import React, {Component, useEffect} from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
-import {BrowserRouter, Route} from "react-router-dom";
-import {connect, useSelector} from "react-redux";
+import {HashRouter, Route} from "react-router-dom";
+import {connect} from "react-redux";
 import {Redirect} from "react-router-dom";
 import {Main} from "./Components/Main/Main";
 
@@ -13,31 +13,31 @@ class App extends Component {
         if (this.props.isAuthenticated === true && this.props.isLogged === false) {
             return (
                 <div className="App">
-                    <BrowserRouter>
-                        <Redirect to='/login'/>
-                        <Route path="/login" component={SignIn}/>
+                    <HashRouter>
+                        <Redirect to='/'/>
+                        <Route exact path="/" component={SignIn}/>
                         <Route path="/register" component={SignUp}/>
                         <Route path="/main" component={Main}/>
-                    </BrowserRouter>
+                    </HashRouter>
                 </div>)
         } else if (this.props.isAuthenticated === true && this.props.isLogged === true) {
             return (
                 <div className="App">
-                    <BrowserRouter>
+                    <HashRouter>
                         <Redirect to='/main'/>
-                        <Route path="/login" component={SignIn}/>
+                        <Route exact path="/" component={SignIn}/>
                         <Route path="/register" component={SignUp}/>
                         <Route path="/main" component={Main}/>
-                    </BrowserRouter>
+                    </HashRouter>
                 </div>)
         }
         return (
             <div className="App">
-                <BrowserRouter>
-                    <Route path="/login" component={SignIn}/>
+                <HashRouter>
+                    <Route exact path="/" component={SignIn}/>
                     <Route path="/register" component={SignUp}/>
                     <Route path="/main" component={Main}/>
-                </BrowserRouter>
+                </HashRouter>
             </div>)
     }
 }
