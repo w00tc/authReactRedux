@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "//w00tc.github.io/my-app/static/css/main.5f361e03.chunk.css",
+    "main.js": "//w00tc.github.io/my-app/static/js/main.b291b881.chunk.js",
+    "main.js.map": "//w00tc.github.io/my-app/static/js/main.b291b881.chunk.js.map",
+    "runtime-main.js": "//w00tc.github.io/my-app/static/js/runtime-main.a66cfc45.js",
+    "runtime-main.js.map": "//w00tc.github.io/my-app/static/js/runtime-main.a66cfc45.js.map",
+    "static/js/2.5689c8e2.chunk.js": "//w00tc.github.io/my-app/static/js/2.5689c8e2.chunk.js",
+    "static/js/2.5689c8e2.chunk.js.map": "//w00tc.github.io/my-app/static/js/2.5689c8e2.chunk.js.map",
+    "index.html": "//w00tc.github.io/my-app/index.html",
+    "precache-manifest.9aad5fdc1eb69979917d1754f43d04e3.js": "//w00tc.github.io/my-app/precache-manifest.9aad5fdc1eb69979917d1754f43d04e3.js",
+    "service-worker.js": "//w00tc.github.io/my-app/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "//w00tc.github.io/my-app/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.5689c8e2.chunk.js.LICENSE.txt": "//w00tc.github.io/my-app/static/js/2.5689c8e2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a66cfc45.js",
+    "static/js/2.5689c8e2.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.b291b881.chunk.js"
+  ]
+}
