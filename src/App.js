@@ -17,7 +17,7 @@ class App extends Component {
                         <Redirect to='/'/>
                         <Route exact path="/" component={SignIn}/>
                         <Route path="/register" component={SignUp}/>
-                        <Route path="/main" component={Main}/>
+                        <Route path="/main" render={() => <Main firstName={this.props.firstName} lastName={this.props.lastName}/>}/>
                     </HashRouter>
                 </div>)
         } else if (this.props.isAuthenticated === true && this.props.isLogged === true) {
@@ -27,7 +27,7 @@ class App extends Component {
                         <Redirect to='/main'/>
                         <Route exact path="/" component={SignIn}/>
                         <Route path="/register" component={SignUp}/>
-                        <Route path="/main" component={Main}/>
+                        <Route path="/main" render={() => <Main firstName={this.props.firstName} lastName={this.props.lastName}/>}/>
                     </HashRouter>
                 </div>)
         }
@@ -36,7 +36,7 @@ class App extends Component {
                 <HashRouter>
                     <Route exact path="/" component={SignIn}/>
                     <Route path="/register" component={SignUp}/>
-                    <Route path="/main" component={Main}/>
+                    <Route path="/main" render={() => <Main firstName={this.props.firstName} lastName={this.props.lastName}/>}/>
                 </HashRouter>
             </div>)
     }
@@ -44,7 +44,9 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated,
-    isLogged: state.auth.isLogged
+    isLogged: state.auth.isLogged,
+    firstName: state.auth.firstName,
+    lastName: state.auth.lastName
 })
 
 export default connect(mapStateToProps)(App);

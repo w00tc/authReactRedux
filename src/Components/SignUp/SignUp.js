@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp(props) {
     const classes = useStyles();
-    const {inputs, handleInputChange, handleSubmit} = useSignUpForm({email: '', password: ''});
+    const {inputs, handleInputChange, handleSubmit} = useSignUpForm({email: '', password: '', firstName: '', lastName: ''});
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline/>
@@ -62,6 +62,8 @@ export default function SignUp(props) {
                                 autoComplete="fname"
                                 name="firstName"
                                 variant="outlined"
+                                value={inputs.firstName}
+                                onChange={handleInputChange}
                                 required
                                 fullWidth
                                 id="firstName"
@@ -74,6 +76,8 @@ export default function SignUp(props) {
                                 variant="outlined"
                                 required
                                 fullWidth
+                                value={inputs.lastName}
+                                onChange={handleInputChange}
                                 id="lastName"
                                 label="Last Name"
                                 name="lastName"

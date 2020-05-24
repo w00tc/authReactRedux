@@ -1,0 +1,11 @@
+.form {
+    margin: 20px;
+}
+.form div {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+h1 {
+    display: inline-block;
+    margin: 10px;
+}

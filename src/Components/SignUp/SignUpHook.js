@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {register} from "../../Redux/authReducer";
+import {register, setUserName} from "../../Redux/authReducer";
 
 export const useSignUpForm = (initialValues) => {
     const [inputs, setInputs] = useState(initialValues);
     const token = useSelector(state => state.auth.token);
     const isAuth = useSelector(state => state.auth.isAuthenticated);
     const dispatch = useDispatch();
-        const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         if (event) event.preventDefault();
         if (token == null) {
             dispatch(register(inputs.email, inputs.password));
+            dispatch(setUserName(inputs.firstName, inputs.lastName));
         }
         console.log(isAuth + " " + token);
     }

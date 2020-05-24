@@ -2,12 +2,16 @@ import {authAPI} from "../Api/api";
 
 const SET_USER_DATA = 'SET_USER_DATA';
 const SET_USER_LOGIN = 'SET_USER_LOGIN';
+const SET_USER_NAME = 'SET_USER_NAME';
 let initialState = {
     objectId: null,
     email: null,
     isAuthenticated: false,
     userToken: null,
-    isLogged: false
+    isLogged: false,
+    firstName: null,
+    lastName: null
+
 };
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -21,12 +25,21 @@ const authReducer = (state = initialState, action) => {
                 ...state,
                 ...action.payload
             }
+        case SET_USER_NAME:
+            return {
+                ...state,
+                ...action.payload
+            }
 
         default:
             return state;
     }
 }
 
+export const setUserName = (firstName, lastName) => ({
+    type: SET_USER_NAME, payload:
+    {firstName, lastName}
+})
 
 export const setAuthUserData = (objectId, email, isAuthenticated) => ({
     type: SET_USER_DATA, payload:
