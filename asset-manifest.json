@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/authReactRedux/static/css/main.5f361e03.chunk.css",
-    "main.js": "/authReactRedux/static/js/main.017f3690.chunk.js",
-    "main.js.map": "/authReactRedux/static/js/main.017f3690.chunk.js.map",
+    "main.js": "/authReactRedux/static/js/main.6c1a3f63.chunk.js",
+    "main.js.map": "/authReactRedux/static/js/main.6c1a3f63.chunk.js.map",
     "runtime-main.js": "/authReactRedux/static/js/runtime-main.d353823f.js",
     "runtime-main.js.map": "/authReactRedux/static/js/runtime-main.d353823f.js.map",
-    "static/js/2.5689c8e2.chunk.js": "/authReactRedux/static/js/2.5689c8e2.chunk.js",
-    "static/js/2.5689c8e2.chunk.js.map": "/authReactRedux/static/js/2.5689c8e2.chunk.js.map",
+    "static/js/2.e19909c1.chunk.js": "/authReactRedux/static/js/2.e19909c1.chunk.js",
+    "static/js/2.e19909c1.chunk.js.map": "/authReactRedux/static/js/2.e19909c1.chunk.js.map",
     "index.html": "/authReactRedux/index.html",
-    "precache-manifest.0039a6275eb8e6e1612a8dfc231c2a9b.js": "/authReactRedux/precache-manifest.0039a6275eb8e6e1612a8dfc231c2a9b.js",
+    "precache-manifest.ba53d474f9a4a94bc0464f697e05fbc1.js": "/authReactRedux/precache-manifest.ba53d474f9a4a94bc0464f697e05fbc1.js",
     "service-worker.js": "/authReactRedux/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/authReactRedux/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.5689c8e2.chunk.js.LICENSE.txt": "/authReactRedux/static/js/2.5689c8e2.chunk.js.LICENSE.txt"
+    "static/js/2.e19909c1.chunk.js.LICENSE.txt": "/authReactRedux/static/js/2.e19909c1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d353823f.js",
-    "static/js/2.5689c8e2.chunk.js",
+    "static/js/2.e19909c1.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.017f3690.chunk.js"
+    "static/js/main.6c1a3f63.chunk.js"
   ]
 }
