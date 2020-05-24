@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component, useEffect} from 'react';
 import './App.css';
+import SignIn from "./Components/SignIn/SignIn";
+import SignUp from "./Components/SignUp/SignUp";
+import {BrowserRouter, Route} from "react-router-dom";
+import {connect, useSelector} from "react-redux";
+import {Redirect} from "react-router-dom";
+import {Main} from "./Components/Main/Main";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+    render() {
+        if (this.props.isAuthenticated === true && this.props.isLogged === false) {
+            return (
+                <div className="App">
+                    <BrowserRouter>
+                        <Redirect to='/login'/>
+                        <Route path="/login" component={SignIn}/>
+                        <Route path="/register" component={SignUp}/>
+                        <Route path="/main" component={Main}/>
+                    </BrowserRouter>
+                </div>)
+        } else if (this.props.isAuthenticated === true && this.props.isLogged === true) {
+            return (
+                <div className="App">
+                    <BrowserRouter>
+                        <Redirect to='/main'/>
+                        <Route path="/login" component={SignIn}/>
+                        <Route path="/register" component={SignUp}/>
+                        <Route path="/main" component={Main}/>
+                    </BrowserRouter>
+                </div>)
+        }
+        return (
+            <div className="App">
+                <BrowserRouter>
+                    <Route path="/login" component={SignIn}/>
+                    <Route path="/register" component={SignUp}/>
+                    <Route path="/main" component={Main}/>
+                </BrowserRouter>
+            </div>)
+    }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+    isAuthenticated: state.auth.isAuthenticated,
+    isLogged: state.auth.isLogged
+})
+
+export default connect(mapStateToProps)(App);
